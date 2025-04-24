@@ -6,6 +6,10 @@ import { MyNgrxComponent } from './components/my-ngrx/my-ngrx.component';
 export const routes: Routes = [
     {
         path: '',
+        loadComponent: ()=>import('./components/ag-grid-learn/ag-grid-learn.component').then(m=>m.AgGridLearnComponent)
+    },
+    {
+        path: 'subject-share',
         loadComponent: ()=>import('./components/subject-share/subject-share.component').then(m=>m.SubjectShareComponent)
     },
     {
