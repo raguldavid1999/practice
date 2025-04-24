@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<section>
+    <ul>
+        @for(item of listofData;track $index){
+            <li>{{item}}</li>
+        }
+    </ul>
+
+    <button type="button" (click)="addValue('David')" >Add</button>
+    <button type="button" routerLink="/redirect">Redirect</button>
+</section>
+
+<input type="text" [formControl]="searchControl">
+<button type="button" (click)="changeName()">Change Name</button>
+
+<div class="box"></div>

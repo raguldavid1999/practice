@@ -1,0 +1,14 @@
+<section>
+    <input type="text" [(ngModel)]="newValue">
+    <button type="submit" (click)="onSubmit1()">Submit</button>
+  
+    <ol>
+      @if (allList$ | async; as allList) {
+        @for (value of allList; track $index) {
+          <li>{{ value }}</li>
+        }
+      }
+    </ol>
+  </section>
+  <button type="button" routerLink="/redirect">Redirect</button>
+  <!-- <router-outlet /> -->
